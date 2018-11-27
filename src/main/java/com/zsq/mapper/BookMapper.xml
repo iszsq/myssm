@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace理解成实现类的全路径（包名+类型）-->
+<mapper namespace="com.zsq.dao.BookDao">
+    <!--
+        id:方法名
+        parameterType:定义参数类型
+        resultType:返回值类型
+    -->
+    <select id="selAll"  resultType="com.zsq.pojo.Book">
+        select * from book
+    </select>
+
+    <!--根据id查找一行记录-->
+    <select id="selBookById" parameterType="Integer"
+            resultType="com.zsq.pojo.Book">
+        select * from book where id = #{id}
+    </select>
+
+    <!--添加一行记录-->
+    <insert id="addBook" parameterType="com.zsq.pojo.Book" >
+        insert into book(name,price) values(#{name},#{price})
+    </insert>
+
+    <!--修改一行记录-->
+    <update id="updateBook" parameterType="com.zsq.pojo.Book" >
+        update book set name=#{name},price=#{price} where id = #{id}
+    </update>
+
+    <!--删除一行记录-->
+    <delete id="delBook" parameterType="Integer">
+        delete from book where id = #{id}
+    </delete>
+</mapper>
