@@ -43,7 +43,7 @@ public class AntController{
 //     * redirect
 
     @RequestMapping("demo04")
-    @ResponseBody
+    @ResponseBody   //返回字符串
     public People demo4(){
         return new People("中文","123");
     }

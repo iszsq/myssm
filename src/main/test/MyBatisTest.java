@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
+ * 测试mybatis的查询接口
  * @author zsq
  * @date 2018/11/21 - 20:00
  */

@@ -18,7 +18,7 @@
 
     <!--使用注解方式搭建-->
     <!--扫描注解-->
-    <context:component-scan base-package="com.zsq"/>
+    <context:component-scan base-package="com.zsq.controller"/>
 
     <!--注解驱动-->
     <!--相当于用了注解的HandleMapping和HandleAdapter-->
