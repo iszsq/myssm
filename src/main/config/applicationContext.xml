@@ -48,4 +48,6 @@
 
     <!--指定需要扫描的包（包括子包），使注解生效-->
     <context:component-scan base-package="com.zsq.service"/>
+    <!-- websocket相关扫描，主要扫描：WebSocketConfig  如果前面配置能扫描到此类则可以不加 -->
+    <context:component-scan base-package="com.zsq.core.push"/>
 </beans>
